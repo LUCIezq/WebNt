@@ -1,38 +1,34 @@
 const menu = document.getElementById("nav-list");
 const button = document.getElementById("menu-toggle");
-
-// Al hacer clic en el botón del menú, alternar la clase "active"
-button.addEventListener("click", (event) => {
-  event.stopPropagation(); // Evita la propagación del evento al body
-  menu.classList.toggle("active");
-});
-
-// Al hacer clic en el body, si el menú está activo, eliminar la clase "active"
-document.addEventListener("click", () => {
-  if (menu.classList.contains("active")) {
-    menu.classList.remove("active");
-  }
-});
-
-// Evita la propagación del clic dentro del menú
-menu.addEventListener("click", (event) => {
-  event.stopPropagation();
-});
-
+const header = document.getElementById("header");
 const button_close = document.getElementById("button-close");
 
+// Añade un evento al botón de menú para alternar la clase "active" del menú
 button.addEventListener("click", (event) => {
+  menu.classList.toggle("active");
+
+  // Ajusta el estado de los botones según el menú esté activo o no
   if (menu.classList.contains("active")) {
     button.classList.add("desactive-button");
     button_close.classList.add("active-button-close");
-    cerrarMenu();
+  } else {
+    button.classList.remove("desactive-button");
+    button_close.classList.remove("active-button-close");
   }
 });
 
-function cerrarMenu() {
-  button_close.addEventListener("click", (event) => {
+// Añade un evento al documento para cerrar el menú si está abierto y se hace clic fuera de él
+document.addEventListener("click", (event) => {
+  if (!header.contains(event.target)) {
     menu.classList.remove("active");
-    button_close.classList.remove("active-button-close");
     button.classList.remove("desactive-button");
-  });
-}
+    button_close.classList.remove("active-button-close");
+  }
+});
+
+// Añade un evento al botón de cierre para cerrar el menú y ajustar los botones
+button_close.addEventListener("click", (event) => {
+  menu.classList.remove("active");
+  button.classList.remove("desactive-button");
+  button_close.classList.remove("active-button-close");
+});

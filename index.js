@@ -5,7 +5,3 @@ const body = document.getElementById("body");
 button.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
-
-body.addEventListener("click", () => {
-  menu.classList.toggle("desactive");
-});

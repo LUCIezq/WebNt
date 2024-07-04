@@ -18,3 +18,21 @@ document.addEventListener("click", () => {
 menu.addEventListener("click", (event) => {
   event.stopPropagation();
 });
+
+const button_close = document.getElementById("button-close");
+
+button.addEventListener("click", (event) => {
+  if (menu.classList.contains("active")) {
+    button.classList.add("desactive-button");
+    button_close.classList.add("active-button-close");
+    cerrarMenu();
+  }
+});
+
+function cerrarMenu() {
+  button_close.addEventListener("click", (event) => {
+    menu.classList.remove("active");
+    button_close.classList.remove("active-button-close");
+    button.classList.remove("desactive-button");
+  });
+}

@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 1rem 0.5rem;
     background-color: #EED7CD;
     position: relative;
     border-radius: 1rem 1rem 0 0;
@@ -86,7 +86,8 @@ header h1 {
     visibility: visible; */
     height: 200px;
 }
-#nav-list.desactive{
+
+#nav-list.desactive {
     height: 0;
 }
 
@@ -117,12 +118,26 @@ header h1 {
     font-size: 1.25rem;
     color: #000000;
     cursor: pointer;
+    position: relative;
+}
+
+#button-close {
+    position: absolute;
+    visibility: hidden;
+}
+
+#menu-toggle.desactive-button {
+    visibility: hidden;
+}
+
+#button-close.active-button-close {
+    visibility: visible;
+    cursor: pointer;
 }
 
 .container-button {
     position: relative;
-}
-
-header i {
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

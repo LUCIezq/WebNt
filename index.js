@@ -12,6 +12,8 @@ document.addEventListener("click", (event) => {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
     menu.classList.add("desactive");
+  }else{
+    menu.classList.remove("active");
   }
 });
 

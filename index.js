@@ -1,10 +1,21 @@
 const menu = document.getElementById("nav-list");
 const button = document.getElementById("menu-toggle");
-const body = document.getElementById("body");
 
-button.addEventListener("click", () => {
+// Al hacer clic en el botón del menú, alternar la clase "active"
+button.addEventListener("click", (event) => {
+  event.stopPropagation(); // Evita la propagación del evento al body
   menu.classList.toggle("active");
 });
-body.addEventListener("click", () => {
-  menu.classList.toggle("desactive");
+
+// Al hacer clic en el body, si el menú está activo, agregar la clase "desactive"
+document.addEventListener("click", (event) => {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    menu.classList.add("desactive");
+  }
+});
+
+// Evita la propagación del clic dentro del menú
+menu.addEventListener("click", (event) => {
+  event.stopPropagation();
 });

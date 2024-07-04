@@ -6,5 +6,5 @@ button.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 body.addEventListener("click", () => {
-  menu.classList.toggle("active");
+  body.classList.toggle("active");
 });

@@ -86,6 +86,9 @@ header h1 {
     visibility: visible; */
     height: 200px;
 }
+#nav-list.desactive{
+    height: 0;
+}
 
 #nav-list li a {
     text-decoration: none;

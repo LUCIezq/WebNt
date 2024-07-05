@@ -25,7 +25,7 @@ body {
 }
 
 #nav-list a:focus {
-    color: rgb(206, 92, 72);
+    color: #ce5c48;
 }
 
 header {
@@ -38,21 +38,24 @@ header {
     background-color: #EED7CD;
     position: relative;
     border-radius: 1rem 1rem 0 0;
+
 }
 
 
 .title {
     font-family: 'Chatlong';
-    color: #C373D9;
+    color: #c800ff61;
     font-size: 0.8em;
     text-decoration: none;
 }
 
 #nav-list {
-    background-color: #EED7CD;
+    background-color: rgb(238, 215, 205);
     font-family: 'Poppins';
     font-size: 1rem;
     border-radius: 0px 0px 30px 30px;
+    
+
 
 
     display: flex;
@@ -68,6 +71,7 @@ header {
     transition: 0.5s ease;
     height: 0;
     overflow: hidden;
+
 }
 
 #nav-list.active {
@@ -131,12 +135,12 @@ header {
 
 main {
     text-align: center;
-    margin-top: 2em;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    margin: 2rem 0;
 }
 
 .new-product {
@@ -148,14 +152,13 @@ main {
 }
 
 .new-product-contenedor {
-    width: 60%;
+    width: 70%;
 }
 
 .new-product-contenedor p {
     font-family: 'Chapaza';
-    font-size: 1.9em;
+    font-size: 2.2em;
     line-height: 1.2em;
-    padding-bottom: 0.5em;
     color: #000000c3;
 }
 
@@ -168,15 +171,16 @@ main {
     font-size: 1em;
     font-family: 'Poppins';
     color: #000000c3;
+    background-color: #C373D9;
 }
 
 .images img {
-    height: 3em;
-    border-radius: 1em;
+    height: 3.5em;
+    border-radius: 1.1em;
 }
 
 .images img~img {
-    height: 3.4em;
+    height: 4em;
 }
 
 .images {
@@ -194,9 +198,9 @@ main {
 
 .image-cafe {
     width: calc(100% + 4rem);
-    height: 500px;
-    overflow: hidden;
+    height: 600px;
     position: relative;
+    overflow: hidden;
 }
 
 /* .image-cafe div {
@@ -214,8 +218,37 @@ main {
 .image-cafe img {
     position: absolute;
     height: 100%;
-    right: -100px;
+    right: -120px;
+    bottom: -px;
+}
 
+footer {
+    background-color: #d1b8b8;
+    width: calc(100% + 4rem);
+    border-radius: 3em 3em 0 0;
+    margin-left: -2rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 1em 1em;
+}
+
+footer ul li {
+    list-style: none;
+    text-align: center;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins';
+}
+
+footer ul li a:hover {
+    background-color: white;
 }
 
 

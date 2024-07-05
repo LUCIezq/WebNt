@@ -159,11 +159,12 @@ main {
     font-family: 'Chapaza';
     font-size: 2.2em;
     line-height: 1.2em;
+    margin-bottom: 0.5em;
     color: #000000c3;
 }
 
 .new-product-contenedor span {
-    color: #C373D9;
+    color: #c373d9;
 
 }
 
@@ -171,7 +172,7 @@ main {
     font-size: 1em;
     font-family: 'Poppins';
     color: #000000c3;
-    background-color: #C373D9;
+    background-color: #c373d91b;
 }
 
 .images img {
@@ -184,6 +185,7 @@ main {
 }
 
 .images {
+    margin-top: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;

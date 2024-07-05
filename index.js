@@ -32,3 +32,14 @@ button_close.addEventListener("click", (event) => {
   button.classList.remove("desactive-button");
   button_close.classList.remove("active-button-close");
 });
+
+
+  const buttonSubmenu = document.getElementById('selector');
+  
+  const navSubList = document.getElementById('nav-sub-list');
+
+  buttonSubmenu.addEventListener('click', function(e) {
+
+      navSubList.classList.toggle('active');
+  });
+

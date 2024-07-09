@@ -43,3 +43,8 @@ button_close.addEventListener("click", (event) => {
       navSubList.classList.toggle('active');
   });
 
+  button_close.addEventListener('click',(e)=>{
+    navSubList.classList.remove('active');
+  })
+  
+

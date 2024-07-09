@@ -68,19 +68,18 @@ header {
     height: 0;
     overflow: hidden;
     height: 0;
-    transition: 0.5s ease ;
 }
 
 #nav-list.active {
     padding: 1em 0;
-    height: 250px;
+    height: fit-content;
 }
 
 #nav-list.desactive {
-    height: 0;
+    height: fit-content;
 }
 
-.sub-menu{
+.sub-menu {
     text-align: center;
 }
 
@@ -92,18 +91,18 @@ header {
 #nav-sub-list {
     list-style: none;
     text-align: center;
-    height: 0;
     overflow: hidden;
     transition: 0.5s ease;
+    height: 0;
 }
 
-.bi-arrow-down{
+.bi-arrow-down {
     color: white;
     cursor: pointer;
 }
 
-#nav-sub-list.active{
-    height: 44px;
+#nav-sub-list.active {
+    height: 50px;
 }
 
 
@@ -182,7 +181,6 @@ main {
 
 .new-product-contenedor span {
     color: #c373d9;
-
 }
 
 .new-product-contenedor p~p {
@@ -240,7 +238,7 @@ main {
 .image-cafe img {
     position: absolute;
     height: 90%;
-    right: -200px; 
+    right: -200px;
 }
 
 footer {
@@ -267,36 +265,80 @@ footer ul li a {
     color: rgb(0, 0, 0);
     font-family: 'Poppins';
     font-size: 0.7em;
-
 }
 
-@media screen and (min-width:768px) {
-    #menu-toggle {
-        display: none;
-    }
-
+@media screen and (min-width:425px) {
     #nav-list {
-        gap: 1rem;
-        flex-direction: row;
-        position: static;
-        overflow: visible;
+        font-size: 1.2rem;
     }
 
-    .rewards {
-        margin-top: 0;
+    main {
+        text-align: left;
+        align-items: flex-start;
+        border-radius: none;
+        padding: 5em 2em;
+        height: fit-content;
     }
 
-    .container-button {
+    .new-product {
+        font-size: 3em;
+    }
+
+    .new-product-contenedor {
+        width: 100%;
+    }
+
+    .new-product-contenedor p {
+        font-size: 3.6em;
+        line-height: 1.1em;
+        margin-bottom: 0.2em;
+    }
+
+    .new-product-contenedor p~p {
+        font-size: 1.5em;
+        width: 100%;
+        margin: 0;
+    }
+
+    .images {
+        justify-content: flex-start;
+        gap: 1.5em;
+    }
+
+    .images span {
         display: none;
     }
 
-    #nav-list li a {
-        padding: 0.4em;
-        border-radius: 0.8em;
+    .images img {
+        height: 4em;
     }
 
-    #nav-list li a:hover {
-        color: white;
-        background-color: #caaad2;
+    .images img~img {
+        height: 4.4em;
     }
+
+    .image-cafe {
+        width: calc(100% + 4rem);
+        height: 900px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-cafe img {
+        position: absolute;
+        height: 100%;
+        right: -170px;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins';
+        font-size: 1.1em;
+    }
+
+
+
+
+
 }
